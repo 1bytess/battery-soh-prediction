@@ -1,0 +1,55 @@
+{
+  "models": {
+    "Random Forest": "rf_model.joblib",
+    "XGBoost": "xgb_model.joblib",
+    "Simple LSTM": "lstm_baseline_model.keras",
+    "TCN": "tcn_model_final.keras",
+    "BiLSTM": "bilstm_model_final.keras"
+  },
+  "preprocessing": {
+    "all_preprocessing": "preprocessing_objects.joblib",
+    "prepared_dl_data": "prepared_dl_data.pkl",
+    "sequence_dataset": "sequence_dataset_interpolated.pkl"
+  },
+  "results": {
+    "evaluation_results": "all_model_evaluation_results.pkl",
+    "clean_features": "discharge_features_clean.csv"
+  },
+  "model_performance": [
+    {
+      "Model": "Simple LSTM",
+      "MAE (Ah)": 0.15785718255233136,
+      "RMSE (Ah)": 0.19955110594991435,
+      "R\u00b2": 0.6920368272549875,
+      "MAPE (%)": 14.351685481702361
+    },
+    {
+      "Model": "Random Forest",
+      "MAE (Ah)": 0.05659745370673427,
+      "RMSE (Ah)": 0.076719024354336,
+      "R\u00b2": 0.9544805873564863,
+      "MAPE (%)": 5.298453029013187
+    },
+    {
+      "Model": "TCN",
+      "MAE (Ah)": 0.052899424619392045,
+      "RMSE (Ah)": 0.07578170662576983,
+      "R\u00b2": 0.9555860632176565,
+      "MAPE (%)": 5.0253488865397715
+    },
+    {
+      "Model": "BiLSTM",
+      "MAE (Ah)": 0.051545826887757405,
+      "RMSE (Ah)": 0.06889623678312974,
+      "R\u00b2": 0.9632902430964945,
+      "MAPE (%)": 4.638281695996781
+    },
+    {
+      "Model": "XGBoost",
+      "MAE (Ah)": 0.05329738080700953,
+      "RMSE (Ah)": 0.06824518291666996,
+      "R\u00b2": 0.9639807627922707,
+      "MAPE (%)": 4.899772270197142
+    }
+  ]
+}
