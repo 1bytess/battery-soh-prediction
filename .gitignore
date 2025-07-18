@@ -2,4 +2,4 @@
 .env.*
 .DS_Store
 .venv 
-
+escl_venv
