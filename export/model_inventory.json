@@ -1,7 +1,5 @@
 {
     "models": {
-        "Random Forest": "models/rf_model.joblib",
-        "XGBoost": "models/xgb_model.joblib",
         "Simple LSTM": "models/lstm_baseline_model.keras",
         "TCN": "models/tcn_model_final.keras",
         "BiLSTM": "models/bilstm_model_final.keras"
@@ -19,24 +17,24 @@
     "model_performance": [
         {
             "Model": "LSTM",
-            "MAE (Ah)": 0.07596720964787125,
-            "RMSE (Ah)": 0.12368779676507312,
-            "R\u00b2": 0.8816837996247505,
-            "MAPE (%)": 7.70236561615055
+            "MAE (Ah)": 0.1071230003279034,
+            "RMSE (Ah)": 0.18724146503671385,
+            "R\u00b2": 0.7288593903881495,
+            "MAPE (%)": 9.502945815003502
         },
         {
             "Model": "TCN",
-            "MAE (Ah)": 0.04736195141061933,
-            "RMSE (Ah)": 0.06663624058509685,
-            "R\u00b2": 0.9656591150844311,
-            "MAPE (%)": 4.459922274344352
+            "MAE (Ah)": 0.1075754677083448,
+            "RMSE (Ah)": 0.15536220884080548,
+            "R\u00b2": 0.8133270970003481,
+            "MAPE (%)": 10.405662633622457
         },
         {
             "Model": "BiLSTM",
-            "MAE (Ah)": 0.04641207040297159,
-            "RMSE (Ah)": 0.06531354428243212,
-            "R\u00b2": 0.9670088837227065,
-            "MAPE (%)": 4.324705812438139
+            "MAE (Ah)": 0.10780702985579002,
+            "RMSE (Ah)": 0.14430778586346563,
+            "R\u00b2": 0.838946549553133,
+            "MAPE (%)": 9.750201876989827
         }
     ]
 }

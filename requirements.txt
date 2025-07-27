@@ -1,20 +1,14 @@
+# Core Data Science
 numpy==1.25.0
 pandas
 matplotlib
 seaborn
 scikit-learn
-xgboost
-lightgbm
-catboost
 scipy
 tqdm
 jupyter
 ipykernel
-statsmodels
-PyWavelets
-pyarrow
-dask
-pynvml
+ipywidgets
 
 # Deep Learning Libraries with GPU support
 tensorflow==2.14.0
@@ -22,12 +16,16 @@ torch
 torchvision
 torchaudio
 tensorboard
-
-# Time Series/Sequence-specific Libraries (good for LSTM/BiLSTM/TCN)
-tsfresh
-tslearn
 tf-keras
-keras-tcn
 
-# Optional (useful in many battery data projects)
+# Time Series/Sequence-specific Libraries
+keras-tcn
+statsmodels
+PyWavelets
+
+# Data handling
 h5py
+pyarrow
+
+# GPU monitoring
+pynvml
