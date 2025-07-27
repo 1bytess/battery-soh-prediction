@@ -14,6 +14,7 @@ statsmodels
 PyWavelets
 pyarrow
 dask
+pynvml
 
 # Deep Learning Libraries with GPU support
 tensorflow==2.14.0
@@ -21,9 +22,6 @@ torch
 torchvision
 torchaudio
 tensorboard
-
-# Utility libraries
-joblib
 
 # Time Series/Sequence-specific Libraries (good for LSTM/BiLSTM/TCN)
 tsfresh
