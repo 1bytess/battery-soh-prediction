@@ -11,7 +11,7 @@ ipykernel
 ipywidgets
 
 # Deep Learning Libraries with GPU support
-tensorflow==2.14.0
+tensorflow==2.15.0
 torch
 torchvision
 torchaudio
