@@ -19,16 +19,25 @@ This project uses the **NASA Battery Dataset**, which is publicly available on K
 
 A key aspect of this project is feature engineering to extract meaningful information from the raw battery data. The features used for training the models include:
 
+- **Target Variable**:
+    - `calculated_capacity`
+
 - **Cycle-based Features**:
     - `voltage_start`, `voltage_end`, `voltage_mean`, `voltage_min`, `voltage_drop`
     - `current_mean`, `current_std`
     - `temperature_mean`, `temperature_max`, `temperature_range`
     - `duration_seconds`, `duration_hours`
     - `energy_wh` (Energy in Watt-hours)
+    - `ambient_temperature`
+    - `dq_dv_max`
+    - `voltage_variance`
+    - `coulombic_efficiency`
 
 - **Impedance Features**:
     - `Re_mapped` (Ohmic resistance)
     - `Rct_mapped` (Charge-transfer resistance)
+    - `impedance_time_diff`
+
 
 - **Time-Series Features**:
     - Interpolated voltage, current, and temperature profiles over a normalized time axis.
@@ -47,7 +56,7 @@ To run this project, you'll need to set up a Python environment and install the 
 
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/1bytess/escl-soh-prediction](https://github.com/your-username/your-repository-name.git)
+    git clone https://github.com/1bytess/escl-soh-prediction.git
     cd escl-soh-prediction
     ```
 
@@ -82,9 +91,9 @@ The models were evaluated based on Mean Absolute Error (MAE), Root Mean Squared 
 
 | Model  | MAE (Ah) | RMSE (Ah) | R²   | MAPE (%) |
 | :----- | :------- | :-------- | :--- | :------- |
-| **TCN** | 0.0215   | 0.0311    | 0.98 | 1.45     |
-| **BiLSTM** | 0.0248   | 0.0358    | 0.97 | 1.68     |
-| **LSTM** | 0.0289   | 0.0412    | 0.96 | 1.95     |
+| **BiLSTM** | 0.0855   | 0.1314    | 0.8628 | 8.34     |
+| **TCN** | 0.0728   | 0.1222    | 0.8813 | 7.05     |
+| **LSTM** | 0.0681   | 0.1068    | 0.9094 | 6.25     |
 
 The **Temporal Convolutional Network (TCN)** demonstrated the best performance across all metrics, suggesting its strong capability in capturing the temporal dynamics of battery degradation.
 
@@ -103,14 +112,3 @@ The **Temporal Convolutional Network (TCN)** demonstrated the best performance a
 ├── README.md                 # This file
 └── requirements.txt          # Python dependencies
 ```
-
-## 🙏 Contributing
-
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some feature'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a pull request.
